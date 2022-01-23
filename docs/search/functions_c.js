@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xl_5favailable_0',['xl_available',['../classXLG.html#aa6ff5b26d5f37b96c8872c80a11e2505',1,'XLG']]],
-  ['xlg_1',['XLG',['../classXLG.html#aaae4e00b96d8234b4e385974f51aa3a1',1,'XLG']]]
+  ['write_0',['write',['../classUnit.html#a3d970f05636ef312b5621cf56e19552d',1,'Unit']]],
+  ['writeregister_1',['writeRegister',['../classI2C.html#a742a79a04425ac95e2974df60e5dfec6',1,'I2C']]]
 ];

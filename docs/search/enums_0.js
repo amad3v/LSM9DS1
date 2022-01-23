@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['bw_5fg_0',['BW_G',['../namespacexlg.html#ae941fc7692a87bc00381c26b384302f1',1,'xlg']]],
-  ['bw_5fscale_5fxl_1',['BW_SCALE_XL',['../namespacexlg.html#a5826a88264a28c5ceb1015ea5eeb26ce',1,'xlg']]],
-  ['bw_5fxl_2',['BW_XL',['../namespacexlg.html#a88c42ef5c6e45718783847e25d4bcb17',1,'xlg']]]
+  ['axes_5fen_0',['AXES_EN',['../namespacexlg.html#a0012d2250be2556caa77d17803c7fc4c',1,'xlg']]],
+  ['axes_5fsign_1',['AXES_SIGN',['../namespacexlg.html#abd4037fe1a8fa3a920627fe715f00a6c',1,'xlg']]]
 ];

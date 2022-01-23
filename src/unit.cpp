@@ -1,3 +1,25 @@
+/**
+ * @file unit.cpp
+ * @date 23.01.22
+ * @author amad3v (amad3v@gmail.com)
+ * @version 1.0.1
+ * @copyright Copyright (c) 2022
+ *
+ * This file is part of LSM9DS1.
+ *
+ * LSM9DS1 is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License.
+ *
+ * LSM9DS1 is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LSM9DS1.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #include "unit.h"
 
 Unit::Unit(I2C* i2c_ptr, uint8_t addr) : i2c { i2c_ptr }, address { addr } {}

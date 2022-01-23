@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['who_5fam_5fi_0',['WHO_AM_I',['../namespacemag.html#a768716910068121cedad97afe053cfa6',1,'mag::WHO_AM_I()'],['../namespacexlg.html#a9f1d5b36553f750929a57e899dc38653',1,'xlg::WHO_AM_I()']]],
-  ['write_1',['write',['../classUnit.html#a3d970f05636ef312b5621cf56e19552d',1,'Unit']]],
-  ['writeregister_2',['writeRegister',['../classI2C.html#a742a79a04425ac95e2974df60e5dfec6',1,'I2C']]]
+  ['valid_5fdevice_5fid_0',['valid_device_id',['../classMag.html#ade9409d98ea6415af89f3ca808a19672',1,'Mag::valid_device_id()'],['../classUnit.html#a5738c424697fb55feb794f97b0f275ee',1,'Unit::valid_device_id()'],['../classXLG.html#abe9cf3910d30b828c3d14d1a2478c275',1,'XLG::valid_device_id()']]]
 ];

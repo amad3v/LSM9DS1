@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['xl_5ffsr_5fso_0',['XL_FSR_SO',['../namespacexlg.html#aabbdafd11a36adc7353dca67c119aa42',1,'xlg']]],
-  ['xlgsensor_1',['xlgSensor',['../classSensor.html#a02d34edcdfb3f67ec530b133dc5563b1',1,'Sensor']]]
+  ['who_5fam_5fi_0',['WHO_AM_I',['../namespacemag.html#a768716910068121cedad97afe053cfa6',1,'mag::WHO_AM_I()'],['../namespacexlg.html#a9f1d5b36553f750929a57e899dc38653',1,'xlg::WHO_AM_I()']]]
 ];

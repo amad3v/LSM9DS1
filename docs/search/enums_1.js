@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fsr_0',['FSR',['../namespacemag.html#aaecffc91f4216c7b15f8d694d2cf8d8d',1,'mag']]],
-  ['fsr_5fg_1',['FSR_G',['../namespacexlg.html#a791ba446d93a8251d655f035066cb8b7',1,'xlg']]],
-  ['fsr_5fxl_2',['FSR_XL',['../namespacexlg.html#a0fb42a1150a07dba716200eda0940f61',1,'xlg']]]
+  ['bw_5fg_0',['BW_G',['../namespacexlg.html#ae941fc7692a87bc00381c26b384302f1',1,'xlg']]],
+  ['bw_5fscale_5fxl_1',['BW_SCALE_XL',['../namespacexlg.html#a5826a88264a28c5ceb1015ea5eeb26ce',1,'xlg']]],
+  ['bw_5fxl_2',['BW_XL',['../namespacexlg.html#a88c42ef5c6e45718783847e25d4bcb17',1,'xlg']]]
 ];
