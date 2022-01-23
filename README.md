@@ -59,3 +59,19 @@ void loop() {
     // ...
 }
 ```
+
+### 5. Changelog
+
+**1.0.1** - 2022-01-23
+
+- Changed magnetometer `X` and `Y` axes orientation:
+  - `X` = `-Y`
+  - `Y` = `-X`
+- Fixed reading signed values.
+- More options implemented.
+
+**1.0.0** - 2022-01-22
+
+- Initial release.
+- Basic functionalities.
+
