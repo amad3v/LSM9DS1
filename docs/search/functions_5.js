@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mag_0',['Mag',['../classMag.html#a6ecc81e8df4e22a36057b7a66c29a25e',1,'Mag']]]
+  ['low_5fpower_0',['low_power',['../classXLG.html#a2eaba2bcc6dac8623ef8d44fd87b2901',1,'XLG']]]
 ];

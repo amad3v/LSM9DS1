@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['xl_5favailable_0',['xl_available',['../classXLG.html#aa6ff5b26d5f37b96c8872c80a11e2505',1,'XLG']]],
-  ['xl_5ffsr_5fso_1',['XL_FSR_SO',['../namespacexlg.html#aabbdafd11a36adc7353dca67c119aa42',1,'xlg']]],
-  ['xlg_2',['XLG',['../classXLG.html',1,'']]],
-  ['xlg_3',['xlg',['../namespacexlg.html',1,'']]],
-  ['xlg_4',['XLG',['../classXLG.html#aaae4e00b96d8234b4e385974f51aa3a1',1,'XLG']]],
-  ['xlg_5',['Xlg',['../group__xlg.html',1,'']]],
-  ['xlgsensor_6',['xlgSensor',['../classSensor.html#a02d34edcdfb3f67ec530b133dc5563b1',1,'Sensor']]]
+  ['who_5fam_5fi_0',['WHO_AM_I',['../namespacemag.html#a768716910068121cedad97afe053cfa6',1,'mag::WHO_AM_I()'],['../namespacexlg.html#a9f1d5b36553f750929a57e899dc38653',1,'xlg::WHO_AM_I()']]],
+  ['write_1',['write',['../classUnit.html#a3d970f05636ef312b5621cf56e19552d',1,'Unit']]],
+  ['writeregister_2',['writeRegister',['../classI2C.html#a742a79a04425ac95e2974df60e5dfec6',1,'I2C']]]
 ];

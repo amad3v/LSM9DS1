@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['odr_0',['odr',['../classMag.html#af47135a9b9d9e36685b40dc1980ec8b0',1,'Mag::odr()'],['../classXLG.html#a9061877943bf347505eab9c65387a178',1,'XLG::odr()']]],
-  ['orient_5fcfg_5fg_1',['ORIENT_CFG_G',['../namespacexlg.html#a311b09abd959125aca3f5296a5f06d9e',1,'xlg']]],
+  ['odr_0',['odr',['../classMag.html#af47135a9b9d9e36685b40dc1980ec8b0',1,'Mag::odr()'],['../classXLG.html#a0f149b0e758ca4664343db9e18606ba5',1,'XLG::odr()']]],
+  ['orient_5fcfg_5fg_1',['ORIENT_CFG_G',['../namespacexlg.html#a659ddc3babdf37ebafb365127c7f4025',1,'xlg']]],
   ['out_5ftemp_5fl_2',['OUT_TEMP_L',['../namespacexlg.html#a44183086789fec6e559efc754b0726b6',1,'xlg']]],
   ['out_5fx_5fl_3',['OUT_X_L',['../namespacemag.html#a94dd5ebdd18c2a10979e4b0cdab0c3a0',1,'mag']]],
   ['out_5fx_5fl_5fg_4',['OUT_X_L_G',['../namespacexlg.html#a5248f676f7cb49b2f7d2bf6ccd3dbf96',1,'xlg']]],

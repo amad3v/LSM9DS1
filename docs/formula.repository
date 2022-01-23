@@ -4,5 +4,7 @@
 \_form#3=8x9:$g$
 \_form#4=74x14:$\unit[1]{g\approx9.81\unitfrac{m}{s^{2}}}$
 \_form#5=5x5:$^{\circ}$
-\_form#6=74x14:$\unit[1]{g\approx 9.81\unitfrac{m}{s^{2}}}$
-\_form#7=19x13:$dps$
+\_form#6=30x14:$\unitfrac{119}{Hz}$
+\_form#7=30x14:$\unitfrac{238}{Hz}$
+\_form#8=74x14:$\unit[1]{g\approx 9.81\unitfrac{m}{s^{2}}}$
+\_form#9=19x13:$dps$

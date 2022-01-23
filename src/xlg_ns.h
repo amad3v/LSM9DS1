@@ -1,3 +1,28 @@
+/**
+ * @file xlg_ns.h
+ * @date 23.01.22
+ * @author amad3v (amad3v@gmail.com)
+ * @version 1.0.1
+ *
+ * @brief Accelerometer/Gyroscope namespace.
+ *
+ * @copyright Copyright (c) 2022
+ *
+ * This file is part of LSM9DS1.
+ *
+ * LSM9DS1 is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License.
+ *
+ * LSM9DS1 is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LSM9DS1.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #ifndef __LIB__LSM9DS1_NAMESPACE_XLG_NS_H__
 #define __LIB__LSM9DS1_NAMESPACE_XLG_NS_H__
 
@@ -86,7 +111,7 @@ enum ODR {
 /**
  * @enum BW_G
  * @brief G bandwidth selection.
- * @see Table 45.
+ * @see Table 45/47.
  */
 enum BW_G {
     BW_0,
@@ -120,7 +145,69 @@ enum BW_XL {
 };
 
 /**
- * @brief Temperature data output register (LSB).
+ * @enum AXES_SIGN
+ * @brief G axes sign.
+ * @see Table 54
+ */
+enum AXES_SIGN {
+    AS_Z = 1,
+    AS_Y,
+    AS_YZ,
+    AS_X,
+    AS_XZ,
+    AS_XY,
+    AS_XYZ,
+};
+
+/**
+ * @enum G_ORIENT
+ * @brief G axes orientation.
+ * @see Table 54
+ */
+enum G_ORIENT {
+    XYZ,
+    XZY,
+    YXZ,
+    YZX,
+    ZXY,
+    ZYX,
+};
+
+/**
+ * @enum AXES_EN
+ *  @brief Enabled axes
+ * @see Table 63/65
+ */
+enum AXES_EN {
+    EN_X = 1,
+    EN_Y,
+    EN_XY,
+    EN_Z,
+    EN_XZ,
+    EN_YZ,
+    EN_XYZ,
+};
+
+/**
+ * @enum DCF
+ * @brief XL digital filter.
+ * @see Table 71
+ */
+enum DCF {
+    ODR_DIV_50,
+    ODR_DIV_100,
+    ODR_DIV_9,
+    ODR_DIV_400,
+};
+
+/**
+ * @brief G sensor reference value register for digital high-pass filter.
+ * @see section 7.8
+ */
+const uint8_t REFERENCE_G { 0x0b };
+
+/**
+ * @brief T data output register (LSB).
  * @see section 7.17
  */
 const uint8_t OUT_TEMP_L { 0x15 };
@@ -190,7 +277,7 @@ struct {
     const Setting odr_xl { 0xe0, 5 };
     const Setting fs_xl { 0x18, 3 };
     const Setting bw_scal_odr { 0x04, 2 };
-    const Setting bw_g { 0x03 };
+    const Setting bw_xl { 0x03 };
 } CTRL_REG6_XL;
 
 /**
@@ -205,15 +292,34 @@ struct {
 } CTRL_REG3_G;
 
 /**
+ * @brief CTRL_REG4 register.
+ * @see section 7.22
+ */
+struct {
+    const uint8_t address { 0x1e };
+    const Setting xyz_enable { 0x38, 3 };
+    const Setting lir_xl1 { 0x02, 1 };
+    const Setting xl1_4d { 0x01 };
+} CTRL_REG4;
+
+/**
+ * @brief CTRL_REG5_XL register.
+ * @see section 7.23
+ */
+struct {
+    const uint8_t address { 0x1f };
+    const Setting dec { 0xc0, 6 };
+    const Setting xyz_enable { 0x38, 3 };
+} CTRL_REG5_XL;
+
+/**
  * @brief ORIENT_CFG_G register.<br>
  * @image html axes_orient.png "Axes orientation"
  * @see section 7.15
  */
 struct {
     const uint8_t address { 0x13 };
-    const Setting sign_x_g { 0x20, 5 };
-    const Setting sign_y_g { 0x10, 4 };
-    const Setting sign_z_g { 0x08, 3 };
+    const Setting sign_xyz_g { 0x38, 3 };
     const Setting orient { 0x07 };
 } ORIENT_CFG_G;
 

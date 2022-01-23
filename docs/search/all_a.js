@@ -1,17 +1,16 @@
 var searchData=
 [
-  ['odr_0',['odr',['../classMag.html#af47135a9b9d9e36685b40dc1980ec8b0',1,'Mag::odr()'],['../classXLG.html#a9061877943bf347505eab9c65387a178',1,'XLG::odr()']]],
-  ['odr_1',['ODR',['../namespacemag.html#a1f6fe24f77721655b1ae6d67d04e4a35',1,'mag::ODR()'],['../namespacexlg.html#a438e41f1d22cc0b55c7abcf7ae348247',1,'xlg::ODR()']]],
-  ['op_5fmode_2',['OP_MODE',['../namespacemag.html#abb5526277d5d8e021de46e42f1df76f0',1,'mag']]],
-  ['orient_5fcfg_5fg_3',['ORIENT_CFG_G',['../namespacexlg.html#a311b09abd959125aca3f5296a5f06d9e',1,'xlg']]],
-  ['out_5ftemp_5fl_4',['OUT_TEMP_L',['../namespacexlg.html#a44183086789fec6e559efc754b0726b6',1,'xlg']]],
-  ['out_5fx_5fl_5',['OUT_X_L',['../namespacemag.html#a94dd5ebdd18c2a10979e4b0cdab0c3a0',1,'mag']]],
-  ['out_5fx_5fl_5fg_6',['OUT_X_L_G',['../namespacexlg.html#a5248f676f7cb49b2f7d2bf6ccd3dbf96',1,'xlg']]],
-  ['out_5fx_5fl_5fxl_7',['OUT_X_L_XL',['../namespacexlg.html#aaf5859ff87a8c9416e6fc1dbcb47d315',1,'xlg']]],
-  ['out_5fy_5fl_8',['OUT_Y_L',['../namespacemag.html#a16f0e09ea7fabd60b4fa6cf664135e46',1,'mag']]],
-  ['out_5fy_5fl_5fg_9',['OUT_Y_L_G',['../namespacexlg.html#a4cb8151c6859e444a545c36ca0b7b46c',1,'xlg']]],
-  ['out_5fy_5fl_5fxl_10',['OUT_Y_L_XL',['../namespacexlg.html#ab530883b3a3cf97bd466bcd1bcc2fc05',1,'xlg']]],
-  ['out_5fz_5fl_11',['OUT_Z_L',['../namespacemag.html#ab6af3b60919cba2c8a1b39db7e68e0e9',1,'mag']]],
-  ['out_5fz_5fl_5fg_12',['OUT_Z_L_G',['../namespacexlg.html#ab5c453ec7b9ed1f36f8165d529758986',1,'xlg']]],
-  ['out_5fz_5fl_5fxl_13',['OUT_Z_L_XL',['../namespacexlg.html#a286f42d2ff954f60d1c5a731dcd2e988',1,'xlg']]]
+  ['m_5ffsr_5fso_0',['M_FSR_SO',['../namespacemag.html#a23b1377b2f6d75c580aaf6269bea1159',1,'mag']]],
+  ['m_5fread_5fmask_1',['m_read_mask',['../classSetting.html#a1bc6d3b0f8b9c2318a65264f3a5dd3e8',1,'Setting']]],
+  ['m_5fshift_2',['m_shift',['../classSetting.html#af1761b45c7b21e3c8d312fdbde51111b',1,'Setting']]],
+  ['m_5fwrite_5fmask_3',['m_write_mask',['../classSetting.html#ab8c5fb8c5a802e3d937c036dab3b92ea',1,'Setting']]],
+  ['mag_4',['Mag',['../classMag.html',1,'']]],
+  ['mag_5',['mag',['../namespacemag.html',1,'']]],
+  ['mag_6',['Mag',['../classMag.html#a6ecc81e8df4e22a36057b7a66c29a25e',1,'Mag::Mag()'],['../group__mag.html',1,'(Global Namespace)']]],
+  ['mag_2ecpp_7',['mag.cpp',['../mag_8cpp.html',1,'']]],
+  ['mag_2eh_8',['mag.h',['../mag_8h.html',1,'']]],
+  ['mag_5fns_2eh_9',['mag_ns.h',['../mag__ns_8h.html',1,'']]],
+  ['mask_5fn_5fshift_10',['mask_n_shift',['../helpers_8cpp.html#a42e0ad152626c719ba0d76c8f2c186ac',1,'mask_n_shift(const Setting &amp;setting, uint8_t value):&#160;helpers.cpp'],['../helpers_8h.html#a42e0ad152626c719ba0d76c8f2c186ac',1,'mask_n_shift(const Setting &amp;setting, uint8_t value):&#160;helpers.cpp']]],
+  ['mode_11',['mode',['../classMag.html#af54122482dd53ed10c1fca78aad6534a',1,'Mag']]],
+  ['msensor_12',['mSensor',['../classSensor.html#a84b2f88121e5b6a96795e80c9304601d',1,'Sensor']]]
 ];

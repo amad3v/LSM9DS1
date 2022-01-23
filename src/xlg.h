@@ -1,3 +1,28 @@
+/**
+ * @file xlg.h
+ * @date 23.01.22
+ * @author amad3v (amad3v@gmail.com)
+ * @version 1.0.1
+ *
+ * @brief Accelerometer/Gyroscope class.
+ *
+ * @copyright Copyright (c) 2022
+ *
+ * This file is part of LSM9DS1.
+ *
+ * LSM9DS1 is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License.
+ *
+ * LSM9DS1 is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with LSM9DS1.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 #ifndef __LIB__LSM9DS1_DEF_XLG_H__
 #define __LIB__LSM9DS1_DEF_XLG_H__
 
@@ -8,6 +33,13 @@
 #include "def.h"
 #include "i2c.h"
 #include "helpers.h"
+
+/**
+ * @brief Convert bool to unsigned int.
+ */
+#define U(b) (b ? 1u : 0u)
+
+using namespace xlg;
 
 /**
  * @class XLG
@@ -25,10 +57,10 @@ class XLG: public Unit {
      * @param addr XL/G's address.
      */
     XLG(I2C* i2c_ptr,
-        xlg::FSR_XL xl_range,
-        xlg::FSR_G g_range,
-        xlg::ODR xlg_rate,
-        uint8_t addr = xlg::ADDRESS);
+        FSR_XL xl_range,
+        FSR_G g_range,
+        ODR xlg_rate,
+        uint8_t addr = ADDRESS);
 
     /**
      * @brief Check if M's ID is valid.
@@ -73,7 +105,7 @@ class XLG: public Unit {
      * @return true if reset,
      * @return false otherwise.
      */
-    bool reset(uint8_t config = xlg::DEFAULT_CONFIG);
+    bool reset(uint8_t config = DEFAULT_CONFIG);
 
     /**
      * @brief Setup M.
@@ -115,21 +147,124 @@ class XLG: public Unit {
      */
     bool t_available();
 
+    /**
+     * @brief Pitch [X-axis], Roll [Y-axis], Yaw [Z-axis] G sign.
+     *
+     * @param axes Axes to change sign.
+     * @return true if written,
+     * @return false otherwise.
+     * @see Table 53
+     */
+    bool sign_axes_g(AXES_SIGN axes);
+
+    /**
+     * @brief Directional user orientation selection.
+     *
+     * @param orient Selected axes orientation.
+     * @return true if written,
+     * @return false otherwise.
+     * @see Table 53
+     */
+    bool g_orientation(G_ORIENT orient);
+
+    /**
+     * @brief Set reference value for gyroscope’s digital high-pass filter.
+     *
+     * @param value Reference.
+     * @return true if written,
+     * @return false otherwise.
+     */
+    bool g_reference(uint8_t value);
+
+    /**
+     * @brief G bandwidth selection.
+     *
+     * @param value Selection.
+     * @return true if written,
+     * @return false otherwise.
+     * @see Table 45/47
+     */
+    bool g_bandwidth(BW_G value);
+
+    /**
+     * @brief Set Anti-aliasing filter bandwidth selection.
+     *
+     * @param value Selection.
+     * @return true if written,
+     * @return false otherwise.
+     * @see Table 67
+     */
+    bool xl_bandwidth(BW_XL value);
+
+    /**
+     * @brief Bandwidth selection mode.
+     *
+     * @param manual false: auto true: manual, use #xl_bandwidth.
+     * @return true if written,
+     * @return false otherwise.
+     * @see Table 67
+     */
+    bool bandwidth_mode(bool manual);
+
+    /**
+     * @brief Enable/Disable low power mode.
+     *
+     * @param enable true: enable, false: disable
+     * @return true if written,
+     * @return false otherwise.
+     * @warning If enabled, ODR will be set to @f$\unitfrac{119}{Hz}@f$ if
+     * higher than @f$\unitfrac{119}{Hz}@f$.
+     * If disabled, ODR will be set to @f$\unitfrac{238}{Hz}@f$ if lower than
+     * @f$\unitfrac{238}{Hz}@f$.
+     * @see Table 10
+     */
+    bool low_power(bool enable);
+
+    /**
+     * @brief Enable/Disable G axes output.
+     *
+     * @param axes Axes to set.
+     * @param enable true: enable/false: disable.
+     * @return true if written,
+     * @return false otherwise.
+     */
+    bool axes_ouput_g(AXES_EN axes, bool enable);
+
+    /**
+     * @brief Enable/Disable XL axes output.
+     *
+     * @param axes Axes to set.
+     * @param enable true: enable/false: disable.
+     * @return true if written,
+     * @return false otherwise.
+     */
+    bool axes_ouput_xl(AXES_EN axes, bool enable);
+
+    /**
+     * @brief High resolution mode.
+     *
+     * @param enable true: enable/false: disable.
+     * @param cutoff Cutoff frequency, depends on ODR.
+     * @return true if written,
+     * @return false otherwise.
+     */
+    bool xl_high_res(bool enable, DCF cutoff = DCF::ODR_DIV_50);
+
   private:
     /**
      * @brief G full scale range.
      */
-    xlg::FSR_G fsr_g;
+    FSR_G fsr_g;
 
     /**
      * @brief XL full scale range.
      */
-    xlg::FSR_XL fsr_xl;
+    FSR_XL fsr_xl;
 
     /**
      * @brief Output data rate.
      */
-    xlg::ODR odr;
+    ODR odr;
 
     /**
      * @brief Retrieve G raw data.
@@ -166,6 +301,19 @@ class XLG: public Unit {
      * @return false otherwise.
      */
     bool status(uint8_t mask);
+
+    /**
+     * @brief Enable/Disable XL/G axes output.
+     *
+     * @tparam T @p reg type
+     * @param reg XL or G register.
+     * @param axes Axes to set.
+     * @param enable true: enable/false: disable.
+     * @return true if written,
+     * @return false otherwise.
+     */
+    template<typename T>
+    bool axes_ouput(T reg, AXES_EN axes, bool enable);
 };
 
 #endif /* __LIB__LSM9DS1_DEF_XLG_H__ */

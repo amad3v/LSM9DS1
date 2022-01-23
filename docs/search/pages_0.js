@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lsmds1_20documentation_0',['LSMDS1 Documentation',['../index.html',1,'']]]
+  ['lsm9ds1_0',['LSM9DS1',['../index.html',1,'']]]
 ];
