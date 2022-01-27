@@ -4,7 +4,6 @@
 
 Sensor driver for LSM9DS1 sensor using I2C.
 Mainly written to use with Arduino Nano 33 BLE.
-This is the first commit covering only basic functionalities.
 
 ### 2. Features
 
@@ -69,9 +68,10 @@ void loop() {
   - `Y` = `-X`
 - Fixed reading signed values.
 - More options implemented.
+- Remove unused header.
+- Replace macro with a function to avoid clash with other libraries.
 
 **1.0.0** - 2022-01-22
 
 - Initial release.
 - Basic functionalities.
-

@@ -36,21 +36,26 @@
 //! XL/G related types and constants
 namespace xlg {
 /**
+ * @brief Convert bool to unsigned int.
+ */
+inline uint8_t U(bool b) { return b ? 1u : 0u; }
+
+/**
  * @brief XL/G default address.
  * @see Table 19
  */
-const uint8_t ADDRESS { 0x6b };
+const uint8_t ADDRESS{0x6b};
 
 /**
  * @brief XL/G default config.
  */
-const uint8_t DEFAULT_CONFIG { 0x05 };
+const uint8_t DEFAULT_CONFIG{0x05};
 
 /**
  * @brief XL sensitivity.
  * @see Table 3
  */
-const float XL_FSR_SO[4] {
+const float XL_FSR_SO[4]{
     0.061e-3,
     0.732e-3,
     0.122e-3,
@@ -61,7 +66,7 @@ const float XL_FSR_SO[4] {
  * @brief G sensitivity.
  * @see Table 3
  */
-const float G_FSR_SO[3] {
+const float G_FSR_SO[3]{
     8.75e-3,
     17.5e-3,
     70.0e-3,
@@ -74,10 +79,10 @@ const float G_FSR_SO[3] {
  * @see Table 67
  */
 enum FSR_XL {
-    G_2,
-    G_16,
-    G_4,
-    G_8,
+  G_2,
+  G_16,
+  G_4,
+  G_8,
 };
 
 /**
@@ -87,9 +92,9 @@ enum FSR_XL {
  * @see Table 45
  */
 enum FSR_G {
-    DPS_245,
-    DPS_500,
-    DPS_2000 = 0x03,
+  DPS_245,
+  DPS_500,
+  DPS_2000 = 0x03,
 };
 
 /**
@@ -99,13 +104,13 @@ enum FSR_G {
  * @see Table 45/67
  */
 enum ODR {
-    R_OFF,
-    R_14_9,
-    R_59_5,
-    R_119,
-    R_238,
-    R_476,
-    R_952,
+  R_OFF,
+  R_14_9,
+  R_59_5,
+  R_119,
+  R_238,
+  R_476,
+  R_952,
 };
 
 /**
@@ -114,10 +119,10 @@ enum ODR {
  * @see Table 45/47.
  */
 enum BW_G {
-    BW_0,
-    BW_1,
-    BW_2,
-    BW_3,
+  BW_0,
+  BW_1,
+  BW_2,
+  BW_3,
 };
 
 /**
@@ -128,8 +133,8 @@ enum BW_G {
  * @see Table 67.
  */
 enum BW_SCALE_XL {
-    AUTO,
-    MANUAL,
+  AUTO,
+  MANUAL,
 };
 
 /**
@@ -138,10 +143,10 @@ enum BW_SCALE_XL {
  * @see Table 67
  */
 enum BW_XL {
-    BW_408,
-    BW_211,
-    BW_105,
-    BW_50,
+  BW_408,
+  BW_211,
+  BW_105,
+  BW_50,
 };
 
 /**
@@ -150,13 +155,13 @@ enum BW_XL {
  * @see Table 54
  */
 enum AXES_SIGN {
-    AS_Z = 1,
-    AS_Y,
-    AS_YZ,
-    AS_X,
-    AS_XZ,
-    AS_XY,
-    AS_XYZ,
+  AS_Z = 1,
+  AS_Y,
+  AS_YZ,
+  AS_X,
+  AS_XZ,
+  AS_XY,
+  AS_XYZ,
 };
 
 /**
@@ -165,12 +170,12 @@ enum AXES_SIGN {
  * @see Table 54
  */
 enum G_ORIENT {
-    XYZ,
-    XZY,
-    YXZ,
-    YZX,
-    ZXY,
-    ZYX,
+  XYZ,
+  XZY,
+  YXZ,
+  YZX,
+  ZXY,
+  ZYX,
 };
 
 /**
@@ -179,13 +184,13 @@ enum G_ORIENT {
  * @see Table 63/65
  */
 enum AXES_EN {
-    EN_X = 1,
-    EN_Y,
-    EN_XY,
-    EN_Z,
-    EN_XZ,
-    EN_YZ,
-    EN_XYZ,
+  EN_X = 1,
+  EN_Y,
+  EN_XY,
+  EN_Z,
+  EN_XZ,
+  EN_YZ,
+  EN_XYZ,
 };
 
 /**
@@ -194,67 +199,67 @@ enum AXES_EN {
  * @see Table 71
  */
 enum DCF {
-    ODR_DIV_50,
-    ODR_DIV_100,
-    ODR_DIV_9,
-    ODR_DIV_400,
+  ODR_DIV_50,
+  ODR_DIV_100,
+  ODR_DIV_9,
+  ODR_DIV_400,
 };
 
 /**
  * @brief G sensor reference value register for digital high-pass filter.
  * @see section 7.8
  */
-const uint8_t REFERENCE_G { 0x0b };
+const uint8_t REFERENCE_G{0x0b};
 
 /**
  * @brief T data output register (LSB).
  * @see section 7.17
  */
-const uint8_t OUT_TEMP_L { 0x15 };
+const uint8_t OUT_TEMP_L{0x15};
 
 /**
  * @brief G X-axis LSB
  * @see section 7.19
  */
-const uint8_t OUT_X_L_G { 0x18 };
+const uint8_t OUT_X_L_G{0x18};
 
 /**
  * @brief G Y-axis LSB
  * @see section 7.20
  */
-const uint8_t OUT_Y_L_G { 0x1a };
+const uint8_t OUT_Y_L_G{0x1a};
 
 /**
  * @brief G Z-axis LSB
  * @see section 7.21
  */
-const uint8_t OUT_Z_L_G { 0x1c };
+const uint8_t OUT_Z_L_G{0x1c};
 
 /**
  * @brief XL X-axis LSB
  * @see section 7.31
  */
-const uint8_t OUT_X_L_XL { 0x28 };
+const uint8_t OUT_X_L_XL{0x28};
 
 /**
  * @brief XL Y-axis LSB
  * @see section 7.32
  */
-const uint8_t OUT_Y_L_XL { 0x2a };
+const uint8_t OUT_Y_L_XL{0x2a};
 
 /**
  * @brief XL Z-axis LSB
  * @see section 7.33
  */
-const uint8_t OUT_Z_L_XL { 0x2c };
+const uint8_t OUT_Z_L_XL{0x2c};
 
 /**
  * @brief Who_AM_I register.
  * @see section 7.11
  */
 struct {
-    const uint8_t address { 0x0f };
-    const uint8_t value { 0x68 };
+  const uint8_t address{0x0f};
+  const uint8_t value{0x68};
 } WHO_AM_I;
 
 /**
@@ -262,10 +267,10 @@ struct {
  * @see section 7.12
  */
 struct {
-    const uint8_t address { 0x10 };
-    const Setting odr_g { 0xe0, 5 };
-    const Setting fs_g { 0x18, 3 };
-    const Setting bw_g { 0x03 };
+  const uint8_t address{0x10};
+  const Setting odr_g{0xe0, 5};
+  const Setting fs_g{0x18, 3};
+  const Setting bw_g{0x03};
 } CTRL_REG1_G;
 
 /**
@@ -273,11 +278,11 @@ struct {
  * @see section 7.24
  */
 struct {
-    const uint8_t address { 0x20 };
-    const Setting odr_xl { 0xe0, 5 };
-    const Setting fs_xl { 0x18, 3 };
-    const Setting bw_scal_odr { 0x04, 2 };
-    const Setting bw_xl { 0x03 };
+  const uint8_t address{0x20};
+  const Setting odr_xl{0xe0, 5};
+  const Setting fs_xl{0x18, 3};
+  const Setting bw_scal_odr{0x04, 2};
+  const Setting bw_xl{0x03};
 } CTRL_REG6_XL;
 
 /**
@@ -285,10 +290,10 @@ struct {
  * @see section 7.14
  */
 struct {
-    const uint8_t address { 0x12 };
-    const Setting lp_mode { 0x80, 7 };
-    const Setting hp_en { 0x40, 6 };
-    const Setting hpcf_g { 0x0f };
+  const uint8_t address{0x12};
+  const Setting lp_mode{0x80, 7};
+  const Setting hp_en{0x40, 6};
+  const Setting hpcf_g{0x0f};
 } CTRL_REG3_G;
 
 /**
@@ -296,10 +301,10 @@ struct {
  * @see section 7.22
  */
 struct {
-    const uint8_t address { 0x1e };
-    const Setting xyz_enable { 0x38, 3 };
-    const Setting lir_xl1 { 0x02, 1 };
-    const Setting xl1_4d { 0x01 };
+  const uint8_t address{0x1e};
+  const Setting xyz_enable{0x38, 3};
+  const Setting lir_xl1{0x02, 1};
+  const Setting xl1_4d{0x01};
 } CTRL_REG4;
 
 /**
@@ -307,9 +312,9 @@ struct {
  * @see section 7.23
  */
 struct {
-    const uint8_t address { 0x1f };
-    const Setting dec { 0xc0, 6 };
-    const Setting xyz_enable { 0x38, 3 };
+  const uint8_t address{0x1f};
+  const Setting dec{0xc0, 6};
+  const Setting xyz_enable{0x38, 3};
 } CTRL_REG5_XL;
 
 /**
@@ -318,9 +323,9 @@ struct {
  * @see section 7.15
  */
 struct {
-    const uint8_t address { 0x13 };
-    const Setting sign_xyz_g { 0x38, 3 };
-    const Setting orient { 0x07 };
+  const uint8_t address{0x13};
+  const Setting sign_xyz_g{0x38, 3};
+  const Setting orient{0x07};
 } ORIENT_CFG_G;
 
 /**
@@ -328,14 +333,14 @@ struct {
  * @see section 7.18
  */
 struct {
-    const uint8_t address { 0x17 };
-    const Setting ig_xl { 0x40, 6 };
-    const Setting ig_g { 0x20, 5 };
-    const Setting inact { 0x10, 4 };
-    const Setting boot_status { 0x08, 3 };
-    const Setting tda { 0x04, 2 };
-    const Setting gda { 0x02, 1 };
-    const Setting xlda { 0x01 };
+  const uint8_t address{0x17};
+  const Setting ig_xl{0x40, 6};
+  const Setting ig_g{0x20, 5};
+  const Setting inact{0x10, 4};
+  const Setting boot_status{0x08, 3};
+  const Setting tda{0x04, 2};
+  const Setting gda{0x02, 1};
+  const Setting xlda{0x01};
 } STATUS_REG_1;
 
 /**
@@ -343,11 +348,11 @@ struct {
  * @see section 7.25
  */
 struct {
-    const uint8_t address { 0x21 };
-    const Setting hr { 0x80, 7 };
-    const Setting dcf { 0x60, 5 };
-    const Setting fds { 0x04, 2 };
-    const Setting hpis { 0x01 };
+  const uint8_t address{0x21};
+  const Setting hr{0x80, 7};
+  const Setting dcf{0x60, 5};
+  const Setting fds{0x04, 2};
+  const Setting hpis{0x01};
 } CTRL_REG7_XL;
 
 /**
@@ -355,15 +360,15 @@ struct {
  * @see section 7.26
  */
 struct {
-    const uint8_t address { 0x22 };
-    const Setting boot { 0x80, 7 };
-    const Setting bdu { 0x40, 6 };
-    const Setting h_lactive { 0x20, 5 };
-    const Setting pp_od { 0x10, 4 };
-    const Setting sim { 0x08, 3 };
-    const Setting if_add_inc { 0x04, 2 };
-    const Setting ble { 0x02, 1 };
-    const Setting sw_reset { 0x01 };
+  const uint8_t address{0x22};
+  const Setting boot{0x80, 7};
+  const Setting bdu{0x40, 6};
+  const Setting h_lactive{0x20, 5};
+  const Setting pp_od{0x10, 4};
+  const Setting sim{0x08, 3};
+  const Setting if_add_inc{0x04, 2};
+  const Setting ble{0x02, 1};
+  const Setting sw_reset{0x01};
 } CTRL_REG8;
 
 /**
@@ -371,12 +376,12 @@ struct {
  * @see section 7.28
  */
 struct {
-    const uint8_t address { 0x24 };
-    const Setting st_g { 0x04, 2 };
-    const Setting st_xl { 0x01 };
+  const uint8_t address{0x24};
+  const Setting st_g{0x04, 2};
+  const Setting st_xl{0x01};
 } CTRL_REG10;
 
-}  // namespace xlg
+} // namespace xlg
 /*! @} End of Doxygen Groups*/
 
 #endif /* __LIB__LSM9DS1_NAMESPACE_XLG_NS_H__ */
